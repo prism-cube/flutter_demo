@@ -11,7 +11,7 @@ class SharedPreferencesEnumDemo extends StatefulWidget {
 }
 
 class _SharedPreferencesEnumDemoState extends State<SharedPreferencesEnumDemo> {
-  String _word = "null2";
+  String _word = "null";
 
   void _changeWord(String word) {
     setState(() {

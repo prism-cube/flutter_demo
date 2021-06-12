@@ -11,12 +11,5 @@ extension MetasyntacticExtension on Metasyntactic {
     Metasyntactic.Piyo: "piyo",
   };
 
-  static final values = {
-    Metasyntactic.Hoge: "hoge",
-    Metasyntactic.Fuga: "fuga",
-    Metasyntactic.Piyo: "piyo",
-  };
-
   String get name => names[this]!;
-  String get value => values[this]!;
 }

@@ -5,13 +5,13 @@ class MarkdownDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("DrawerDemo")),
-      body: Markdown(data: markdowntext),
+      appBar: AppBar(title: Text("MarkdownDemo")),
+      body: Markdown(data: markdownText),
     );
   }
 }
 
-final String markdowntext = '''
+final String markdownText = '''
 # [![Flutter logo][]][flutter.dev]
 
 Flutter is Google's SDK for crafting beautiful, fast user experiences for

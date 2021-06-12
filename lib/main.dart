@@ -17,6 +17,7 @@ import 'package:hello_world/demo/stateful_widget_demo.dart';
 import 'package:hello_world/demo/url_launcher_demo.dart';
 import 'package:hello_world/demo/future_builder_demo.dart';
 import 'package:hello_world/demo/date_picker_demo.dart';
+import 'package:hello_world/demo/flash_demo.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,6 +58,7 @@ class MenuList extends StatelessWidget {
         _menuItem("UrlLauncherDemo", UrlLauncherDemo(), context),
         _menuItem("FutureBuilderDemo", FutureBuilderDemo(), context),
         _menuItem("DatePickerDemo", DatePickerDemo(), context),
+        _menuItem("FlashDemo", FlashDemo(), context),
         _menuItem("AnimatedContainerSwitcher", AnimatedContainerSwitcherDemo(),
             context),
         _menuItem("AnimatedDemo", AnimatedDemo(), context),

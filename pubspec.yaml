@@ -37,6 +37,7 @@ dependencies:
        ref: master
   intl: ^0.17.0
   flash: ^2.0.0
+  flutter_markdown: ^0.6.2
 
 dev_dependencies:
   flutter_test:

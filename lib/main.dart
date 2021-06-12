@@ -12,6 +12,7 @@ import 'package:hello_world/demo/floating_action_button_demo.dart';
 import 'package:hello_world/demo/navigator_demo.dart';
 import 'package:hello_world/demo/page_view_demo.dart';
 import 'package:hello_world/demo/shared_preferences_demo.dart';
+import 'package:hello_world/demo/shared_preferences_enum_demo.dart';
 import 'package:hello_world/demo/stateful_widget_demo.dart';
 import 'package:hello_world/demo/url_launcher_demo.dart';
 
@@ -48,6 +49,8 @@ class MenuList extends StatelessWidget {
         _menuItem("NavigatorDemo", NavigatorDemo(), context),
         _menuItem("PageViewDemo", PageViewDemo(), context),
         _menuItem("SharedPreferencesDemo", SharedPreferencesDemo(), context),
+        _menuItem(
+            "SharedPreferencesEnumDemo", SharedPreferencesEnumDemo(), context),
         _menuItem("StatefulWidgetDemo", StatefulWidgetDemo(), context),
         _menuItem("UrlLauncherDemo", UrlLauncherDemo(), context),
         _menuItem("AnimatedContainerSwitcher", AnimatedContainerSwitcherDemo(),

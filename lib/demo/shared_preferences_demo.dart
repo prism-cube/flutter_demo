@@ -14,8 +14,8 @@ class _SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
   void _changeWord(String word) {
     setState(() {
       _word = word;
-      _saveWord(word);
     });
+    _saveWord(word);
   }
 
   void _saveWord(String word) async {
@@ -27,8 +27,8 @@ class _SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       _word = "null";
-      prefs.remove("WORD");
     });
+    prefs.remove("WORD");
   }
 
   _loadWord() async {

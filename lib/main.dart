@@ -19,6 +19,7 @@ import 'package:hello_world/demo/future_builder_demo.dart';
 import 'package:hello_world/demo/date_picker_demo.dart';
 import 'package:hello_world/demo/flash_demo.dart';
 import 'package:hello_world/demo/markdown_demo.dart';
+import 'package:hello_world/demo/is_platform_demo.dart';
 
 void main() {
   runApp(MyApp());
@@ -44,32 +45,38 @@ class MenuList extends StatelessWidget {
         title: Text('ListView'),
         elevation: 0,
       ),
-      body: ListView(children: [
-        _menuItem("ButtonDemo", ButtonDemo(), context),
-        _menuItem("RowDemo", RowDemo(), context),
-        _menuItem("DrawerDemo", DrawerDemo(), context),
-        _menuItem(
-            "FloatingActionButtonDemo", FloatingActionButtonDemo(), context),
-        _menuItem("NavigatorDemo", NavigatorDemo(), context),
-        _menuItem("PageViewDemo", PageViewDemo(), context),
-        _menuItem("SharedPreferencesDemo", SharedPreferencesDemo(), context),
-        _menuItem(
-            "SharedPreferencesEnumDemo", SharedPreferencesEnumDemo(), context),
-        _menuItem("StatefulWidgetDemo", StatefulWidgetDemo(), context),
-        _menuItem("UrlLauncherDemo", UrlLauncherDemo(), context),
-        _menuItem("FutureBuilderDemo", FutureBuilderDemo(), context),
-        _menuItem("DatePickerDemo", DatePickerDemo(), context),
-        _menuItem("FlashDemo", FlashDemo(), context),
-        _menuItem("MarkdownDemo", MarkdownDemo(), context),
-        _menuItem("AnimatedContainerSwitcher", AnimatedContainerSwitcherDemo(),
-            context),
-        _menuItem("AnimatedDemo", AnimatedDemo(), context),
-        _menuItem("AnimationBuilderDemo", AnimationBuilderDemo(), context),
-        _menuItem(
-            "AnimationContorollerDemo", AnimationContorollerDemo(), context),
-        _menuItem("AnimationTweenDemo", AnimationTweenDemo(), context),
-      ]),
+      drawer: Drawer(child: _menuItemList(context)),
+      body: _menuItemList(context),
     );
+  }
+
+  Widget _menuItemList(BuildContext context) {
+    return ListView(children: [
+      _menuItem("ButtonDemo", ButtonDemo(), context),
+      _menuItem("RowDemo", RowDemo(), context),
+      _menuItem("DrawerDemo", DrawerDemo(), context),
+      _menuItem(
+          "FloatingActionButtonDemo", FloatingActionButtonDemo(), context),
+      _menuItem("NavigatorDemo", NavigatorDemo(), context),
+      _menuItem("PageViewDemo", PageViewDemo(), context),
+      _menuItem("SharedPreferencesDemo", SharedPreferencesDemo(), context),
+      _menuItem(
+          "SharedPreferencesEnumDemo", SharedPreferencesEnumDemo(), context),
+      _menuItem("StatefulWidgetDemo", StatefulWidgetDemo(), context),
+      _menuItem("UrlLauncherDemo", UrlLauncherDemo(), context),
+      _menuItem("FutureBuilderDemo", FutureBuilderDemo(), context),
+      _menuItem("DatePickerDemo", DatePickerDemo(), context),
+      _menuItem("FlashDemo", FlashDemo(), context),
+      _menuItem("MarkdownDemo", MarkdownDemo(), context),
+      _menuItem("IsPlatformDemo", IsPlatformDemo(), context),
+      _menuItem("AnimatedContainerSwitcher", AnimatedContainerSwitcherDemo(),
+          context),
+      _menuItem("AnimatedDemo", AnimatedDemo(), context),
+      _menuItem("AnimationBuilderDemo", AnimationBuilderDemo(), context),
+      _menuItem(
+          "AnimationContorollerDemo", AnimationContorollerDemo(), context),
+      _menuItem("AnimationTweenDemo", AnimationTweenDemo(), context),
+    ]);
   }
 
   Widget _menuItem(String title, Widget widget, BuildContext context) {
@@ -78,6 +85,7 @@ class MenuList extends StatelessWidget {
           new BoxDecoration(border: new Border(bottom: BorderSide(width: 1.0))),
       child: ListTile(
         leading: Icon(Icons.star_border),
+        trailing: Icon(Icons.keyboard_arrow_right),
         title: Text(title),
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
